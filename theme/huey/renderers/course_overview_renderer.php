@@ -47,14 +47,14 @@ class theme_huey_block_course_overview_renderer extends block_course_overview_re
         $html .= html_writer::start_tag('div', array('class'=>'col-md-6'));
         $html .= html_writer::tag('h4', 'Jump to a Registered module');
         $html .= print_jumpto_course_form($courses, 'go_to_registered_courses', 
-                                        get_string("jumptomoduleareaprompt", 'theme_edgy'), true);
+                                        get_string("jumptomoduleareaprompt", 'theme_huey'), true);
         $html .= html_writer::end_tag('div');
 
         if (count($support_courses) > 0) {
         $html .= html_writer::start_tag('div', array('class' => 'col-md-6'));
         $html .= html_writer::tag('h4', 'Jump to an Information area');
         $html .= print_jumpto_course_form($support_courses, 'go_to_support_courses',
-                                        get_string("jumptosupportareaprompt", 'theme_edgy'), true);
+                                        get_string("jumptosupportareaprompt", 'theme_huey'), true);
         $html .= html_writer::end_tag('div');
         }
         $html .= html_writer::end_tag('div');
