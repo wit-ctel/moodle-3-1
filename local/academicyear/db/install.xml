@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/academicyear/db" VERSION="20130326" COMMENT="XMLDB file for Moodle local/academicyear"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="local_academicyear" COMMENT="Default comment for the table, please edit me" NEXT="local_academicyear_course">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="title"/>
+        <FIELD NAME="title" TYPE="char" LENGTH="150" NOTNULL="false" SEQUENCE="false" COMMENT="Title of the academic year, e.g. 2012-2013" PREVIOUS="id" NEXT="startyear"/>
+        <FIELD NAME="startyear" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="The starting year of the academic year entry, e.g. 2012" PREVIOUS="title"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="local_academicyear_course" COMMENT="This table saves information about the academic year of a course instance." PREVIOUS="local_academicyear">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="courseid"/>
+        <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" PREVIOUS="id" NEXT="academicyearid"/>
+        <FIELD NAME="academicyearid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Academic year of this entry." PREVIOUS="courseid"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" NEXT="course"/>
+        <KEY NAME="course" TYPE="foreign" FIELDS="courseid" REFTABLE="course" REFFIELDS="id" COMMENT="The course instance belonging to this academic year" PREVIOUS="primary" NEXT="academicyear"/>
+        <KEY NAME="academicyear" TYPE="foreign" FIELDS="academicyearid" REFTABLE="local_academicyear" REFFIELDS="id" PREVIOUS="course"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>

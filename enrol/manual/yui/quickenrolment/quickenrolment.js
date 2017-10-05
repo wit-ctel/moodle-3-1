@@ -101,7 +101,7 @@ YUI.add('moodle-enrol_manual-quickenrolment', function(Y) {
                     .append(create('<div class="'+CSS.CONTENT+'"></div>')
                         .append(create('<div class="'+CSS.SEARCHCONTROLS+'"></div>')
                             .append(create('<div class="'+CSS.ENROLMENTOPTION+' '+CSS.ROLE+'"><label for="id_enrol_manual_assignable_roles">'+M.util.get_string('assignroles', 'role')+'</label></div>')
-                                    .append(create('<select id="id_enrol_manual_assignable_roles"><option value="">'+M.util.get_string('none', 'enrol')+'</option></select>'))
+                                    .append(create('<select id="id_enrol_manual_assignable_roles"></select>'))
                             )
                             .append(create('<div class="'+CSS.ENTITYSELECTOR+'"></div>'))
                             .append(create('<div class="'+CSS.SEARCHOPTIONS+'"></div>')
@@ -200,7 +200,7 @@ YUI.add('moodle-enrol_manual-quickenrolment', function(Y) {
                     count++;
                     var option = create('<option value="' + roles[i].id + '">' + roles[i].name + '</option>');
                     if (roles[i].id == v) {
-                        index = count;
+                        index = count-1;
                     }
                     s.append(option);
                 }

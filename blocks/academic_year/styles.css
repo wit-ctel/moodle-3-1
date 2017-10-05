@@ -1,0 +1,27 @@
+.block_academic_year {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+.block_academic_year .content {
+    background-color: transparent !important;
+}
+
+.block_academic_year #academic_year {
+    overflow: hidden;
+    zoom: 1;  
+    display: block;
+}
+
+.block_academic_year .content .label {
+    float: left;
+    padding-right: 1.2em;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.block_academic_year .content select {
+    font-size: 1.2em;
+    padding: 2px;
+}

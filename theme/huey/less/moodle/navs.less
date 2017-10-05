@@ -1,0 +1,40 @@
+/** 
+ * jump to menu input (select)
+ */
+.jumpmenu {
+  text-align: left;
+}
+
+/** 
+ * Footer nav
+ *
+ * 1. remove margin on first item
+ */
+
+.footer-nav {
+  list-style: none;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 0;
+  
+  > li {
+    margin-left: 1em;
+    
+    &,
+      > a {
+            display: inline-block;
+           *display: inline;
+            zoom: 1;
+      }
+    }
+    
+  > li:first-child {
+    margin-left: 0; /* [1] */
+  }  
+}
+.navbar-default{
+  background-color: @white-bg;
+}
+.moodle-wit-logo{
+  margin-top:10px;
+}
