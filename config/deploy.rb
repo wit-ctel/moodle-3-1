@@ -2,7 +2,7 @@
 lock '3.6.1'
 
 set :application, 'moodle-wit'
-set :repo_url, 'git@github.com:wit-ctel/moodle-31.git'
+set :repo_url, 'git@github.com:wit-ctel/moodle-3-1.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
