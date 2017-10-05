@@ -1,0 +1,38 @@
+/* modules.less */
+
+// user menu customisations 
+
+.jsenabled {
+    .usermenu {
+        .moodle-actionmenu {
+        
+          &.show {
+              .menu {
+                  
+                  a:hover {
+                      #gradient > .vertical(@state-info-bg, darken(@state-info-bg, 3%));
+                  }
+                }
+            }
+        }
+    }
+}
+
+// Page module
+.path-mod-page {
+    ul, ol {
+      padding-left: 2em;
+    }
+}
+
+.panel, .block, .forumpost {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.col-md-4 .panel{
+  border: #ddd 1px solid;
+}
