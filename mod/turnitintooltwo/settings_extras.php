@@ -254,6 +254,7 @@ switch ($cmd) {
             $string = get_string('pseudoemailaddress', 'turnitintooltwo');
         }
         $cells['pseudoemail'] = new html_table_cell($string);
+        $cells['username'] = new html_table_cell(get_string('username'));
 
         $table->head = $cells;
 
