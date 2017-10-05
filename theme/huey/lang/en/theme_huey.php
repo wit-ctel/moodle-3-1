@@ -43,3 +43,5 @@ $string['customcssdesc'] = 'Whatever CSS rules you add to this textarea will be 
 
 $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
+$string['jumptosupportareaprompt'] = '[Choose an area...]';
+$string['jumptomoduleareaprompt'] = '[Choose a module...]';
