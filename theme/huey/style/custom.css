@@ -19765,6 +19765,10 @@ body {
   box-shadow: none;
   margin-bottom: 8px;
 }
+.text_to_html ul,
+.text_to_html ol {
+  padding-left: 40px;
+}
 /* responsive.less  */
 @media (min-width: 480px) {
   body#page-login-index,
@@ -19845,6 +19849,9 @@ body {
   position: absolute;
   top: 20px;
   right: 30px;
+}
+.summary ol {
+  padding-left: 25px;
 }
 /* modules.less */
 .jsenabled .usermenu .moodle-actionmenu.show .menu a:hover {
